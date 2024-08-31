@@ -2,6 +2,9 @@
 // // VARIABLE, ALERT, CONSOLE.LOG
 // var myName = "niyi";
 // console.log(myName.length)
+var dogAge = prompt("what is your dog age");
+humanAge = ((dogAge - 2) * 4) + 21
+console.log("your age is " + humanAge);
 
 
 // // LENGTH
@@ -16,6 +19,13 @@
 // tweet.slice(0,5);
 
 // console.log(prompt("type your tweet here").slice(0,5));
+
+var yourName = prompt("what is your name");
+var firstLetter = yourName.slice(0, 1);
+var upper = firstLetter.toUpperCase()
+var lower = yourName.slice(1, length.yourName);
+lower.toLowerCase()
+alert("Hello " + upper + lower);
 
 // FUNCTIONS, FLOOR, CALLING FUNCTION,RETURN
 
