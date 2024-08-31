@@ -8,15 +8,24 @@ console.log("your age is " + humanAge);
 
 
 // // LENGTH
-// var tweet = prompt("type your tweet here"); // i had to comment the prompt
-// var tweetCount = tweet.length;
-// console.log("you have written " + tweet.length + " characters, you have " + (200 - tweet.length) + " characters left");
+var tweet = prompt("type your tweet here"); // i had to comment the prompt
+var tweetCount = tweet.length;
+console.log("you have written " + tweet.length + " characters, you have " + (200 - tweet.length) + " characters left");
 
-// // SLICE PROGRAMMERS ALWAYS COUNT FROM ZERO
-// var school = "obafemi";
-// console.log(school.slice(0,2));
+// SLICE PROGRAMMERS ALWAYS COUNT FROM ZERO
+var school = "obafemi";
+console.log(school.slice(0,2));
 
-// tweet.slice(0,5);
+tweet.slice(0,5);
+
+// coding exercise
+function lifeInAge (age){
+    var lifeRemaining = (90 - age);
+    var ageInWeeks = lifeRemaining * 52;
+    var ageInDays = lifeRemaining * 365;
+    console.log("you have " + ageInWeeks + " weeks, " + ageInDays + " days left");
+}
+lifeInAge(30);
 
 // console.log(prompt("type your tweet here").slice(0,5));
 
