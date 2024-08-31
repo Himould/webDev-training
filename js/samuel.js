@@ -1,5 +1,5 @@
 
-// // VARIABLE, ALERT, CONSOLE.LOG
+/*// VARIABLE, ALERT, CONSOLE.LOG
 // var myName = "niyi";
 // console.log(myName.length)
 var dogAge = prompt("what is your dog age");
@@ -72,12 +72,20 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 
 */
 
-function bmiCalculator(weight, height){
-    var bmi = weight / (height * height);
-    return Math.round(bmi);
-}
-console.log(bmiCalculator(65, 1.8));
+// function bmiCalculator(weight, height){
+//     var bmi = weight / (height * height);
+//     return Math.round(bmi);
+// }
+// console.log(bmiCalculator(65, 1.8));
 
+// LOVE CALCULATOR
+prompt("type your lovers name");
+prompt("type your name");
+
+var N = Math.random() * 100;
+ N = Math.floor(N) + 1
+// console.log("your love is " + A + "%");
+alert("your love is " + N + "%")
 
 
 
