@@ -1,13 +1,13 @@
 
-/*// VARIABLE, ALERT, CONSOLE.LOG
-// var myName = "niyi";
-// console.log(myName.length)
+// VARIABLE, ALERT, CONSOLE.LOG
+var myName = "niyi";
+console.log(myName.length)
 var dogAge = prompt("what is your dog age");
 humanAge = ((dogAge - 2) * 4) + 21
 console.log("your age is " + humanAge);
 
 
-// // LENGTH
+// LENGTH
 var tweet = prompt("type your tweet here"); // i had to comment the prompt
 var tweetCount = tweet.length;
 console.log("you have written " + tweet.length + " characters, you have " + (200 - tweet.length) + " characters left");
@@ -27,7 +27,7 @@ function lifeInAge (age){
 }
 lifeInAge(30);
 
-// console.log(prompt("type your tweet here").slice(0,5));
+ console.log(prompt("type your tweet here").slice(0,5));
 
 var yourName = prompt("what is your name");
 var firstLetter = yourName.slice(0, 1);
@@ -72,21 +72,26 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 
 */
 
-// function bmiCalculator(weight, height){
-//     var bmi = weight / (height * height);
-//     return Math.round(bmi);
-// }
-// console.log(bmiCalculator(65, 1.8));
+function bmiCalculator(weight, height){
+    var bmi = weight / (height * height);
+    return Math.round(bmi);
+}
+console.log(bmiCalculator(65, 1.8));
 
 // LOVE CALCULATOR
-prompt("type your lovers name");
+prompt("type your partners' name");
 prompt("type your name");
 
-var N = Math.random() * 100;
- N = Math.floor(N) + 1
-// console.log("your love is " + A + "%");
-alert("your love is " + N + "%")
+let loveCal = Math.random() * 100;
+ loveCal = Math.floor(loveCal) + 1
+ console.log("your love is " + loveCal + "%");
+alert("your love is " + loveCal + "%")
 
+// die rolling game
+const die1 = Math.floor(Math.random() * 6) + 1;
+const die2 = Math.floor(Math.random() * 6) + 1;
+const roll = `you rolled a ${die1} and a ${die2} and they sum up to ${die1 + die2}`
 
-
-
+const word = 'skateboard'
+const facialHair = word.slice(5).replace('o', 'e');
+console.log(facialHair);
