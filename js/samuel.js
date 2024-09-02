@@ -1,4 +1,6 @@
 
+/* Start
+
 // VARIABLE, ALERT, CONSOLE.LOG
 var myName = "niyi";
 console.log(myName.length)
@@ -64,13 +66,13 @@ console.log("here is your " + "$" + getMilk(5, 4) + " change" );
 
 
 
-/* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
+// If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
 
-var bmi = bmiCalculator(65, 1.8); 
+// var bmi = bmiCalculator(65, 1.8); 
 
-bmi should equal 20 when it's rounded to the nearest whole number.
+// bmi should equal 20 when it's rounded to the nearest whole number.
 
-*/
+
 
 function bmiCalculator(weight, height){
     var bmi = weight / (height * height);
@@ -94,4 +96,20 @@ const roll = `you rolled a ${die1} and a ${die2} and they sum up to ${die1 + die
 
 const word = 'skateboard'
 const facialHair = word.slice(5).replace('o', 'e');
-console.log(facialHair);
+console.log(facialHair); 
+
+End*/
+
+// index number
+let animal = 'chicken';
+console.log(animal[3]);
+console.log(animal.toUpperCase());
+console.log(1 < 3);
+
+// if statment
+const num = 290;
+function isEven(num){
+   if (num % 2 === 0){
+   console.log("even")}
+}
+isEven(num);
