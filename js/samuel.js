@@ -170,3 +170,26 @@ function bmiCalculator (weight, height) {
     }
     }
    console.log(bmiCalculator (100, 1.8));
+
+//    Leap year Challenge - this was done by nesting if under if
+
+function isLeap(year) {
+    
+    /**************Don't change the code above****************/    
+        
+        //Write your code here.    
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                return 'Leap year.';
+            }else {
+                return 'Not a leap year.';
+            }
+        } else {
+            return 'Leap year.';
+            }
+        }else {
+            return 'Not a leap year.';}
+    /**************Don't change the code below****************/    
+    }
+    console.log(isLeap(1998));
