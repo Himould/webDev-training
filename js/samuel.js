@@ -158,3 +158,15 @@ if(num <= 100) {
 if(mystery[0] === 'P' && mystery.length > 5 && mystery.indexOf('7') !== -1){
     console.log("YOU GOT IT!!!");
 }
+function bmiCalculator (weight, height) {
+    let bmi = (weight / (height * height));
+    bmi = Math.floor(bmi * 100) / 100;
+    if (bmi < 18.5){
+        return(`Your BMI is ${bmi}, so you are underweight.`);
+    } else if (bmi >= 18.8 && bmi <= 24.9){
+        return(`Your BMI is ${bmi}, so you have a normal weight.`);
+    } else if (bmi > 24.9){
+        return(`Your BMI is ${bmi}, so you overweight.`);
+    }
+    }
+   console.log(bmiCalculator (100, 1.8));
