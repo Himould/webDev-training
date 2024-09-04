@@ -209,3 +209,14 @@ function fizzbuzz(){
     count++;
         console.log(output);
 }
+
+// push,pop, shift,unshift
+const leaderboard = ['Harry', 'Lua', 'Hermione', 'Bellatrix']; 
+leaderboard[1] = 'Luna';
+leaderboard[3] = 'Draco';
+
+const planets = ['The Moon','Venus', 'Earth', 'Mars', 'Jupiter'];
+planets.shift();
+planets.push("Saturn");
+planets.unshift("Mercury");
+
