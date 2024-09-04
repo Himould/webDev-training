@@ -193,3 +193,19 @@ function isLeap(year) {
     /**************Don't change the code below****************/    
     }
     console.log(isLeap(1998));
+
+    // fizzbuzz game
+
+let output = [];
+let count = 1;
+function fizzbuzz(){
+    if (count % 3 === 0 && count % 5 === 0){
+         output.push('fizzbuzz');
+    } else if (count % 3 === 0){
+         output.push('fizz');
+    }else if (count % 5 === 0){
+         output.push('buzz');
+    } else { output.push(count)};
+    count++;
+        console.log(output);
+}
