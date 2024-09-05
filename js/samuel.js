@@ -237,7 +237,20 @@ console.log(availSeat);
 function whosPaying(names) {
     let friendList = ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
     let chosenPayer = Math.floor(Math.random() * friendList.length);
-    console.log(`${friendList[chosenPayer]} is going to buy lunch today!`);
+    return `${friendList[chosenPayer]} is going to buy lunch today!`;
     }
-    whosPaying();
-   
+
+//    While Loop on Fizzbuzz game, note count has already been decleared
+function fizzbuzz(){
+    while(count <= 100) {
+        if (count % 3 === 0 && count % 5 === 0){
+            output.push('fizzbuzz');
+       } else if (count % 3 === 0){
+            output.push('fizz');
+       }else if (count % 5 === 0){
+            output.push('buzz');
+       } else { output.push(count)};
+       count++;
+    }
+        console.log(output);
+}
