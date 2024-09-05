@@ -254,3 +254,12 @@ function fizzbuzz(){
     }
         console.log(output);
 }
+
+// 99 bottles challenge using while loop
+function bear(){
+    let myCount = 99;
+    while(myCount >= 1 && myCount <= 99){
+        myCount--;
+    console.log(`${myCount} bottles of bear on the wall, ${myCount} bottles of bear
+take two down and pass it round, ${(myCount--) - 2} bottles of bear on the wall`);}
+    }
