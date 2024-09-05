@@ -220,3 +220,15 @@ planets.shift();
 planets.push("Saturn");
 planets.unshift("Mercury");
 
+// Nexted Arrays, splice
+const airplaneSeats = [
+    ['Ruth', 'Anthony', 'Stevie'],
+    ['Amelia', 'Pedro', 'Maya'],
+    ['Xavier', 'Ananya', 'Luis'],
+    ['Luke', null, 'Deniz'],
+    ['Rin', 'Sakura', 'Francisco']
+];
+
+const availSeat = airplaneSeats[3];
+console.log(availSeat.splice(1,1, 'Hugo'));
+console.log(availSeat);
