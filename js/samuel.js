@@ -232,3 +232,12 @@ const airplaneSeats = [
 const availSeat = airplaneSeats[3];
 console.log(availSeat.splice(1,1, 'Hugo'));
 console.log(availSeat);
+
+// who is buying lunch game
+function whosPaying(names) {
+    let friendList = ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
+    let chosenPayer = Math.floor(Math.random() * friendList.length);
+    console.log(`${friendList[chosenPayer]} is going to buy lunch today!`);
+    }
+    whosPaying();
+   
