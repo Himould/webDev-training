@@ -261,5 +261,26 @@ function bear(){
     while(myCount >= 1 && myCount <= 99){
         myCount--;
     console.log(`${myCount} bottles of bear on the wall, ${myCount} bottles of bear
-take two down and pass it round, ${(myCount--) - 2} bottles of bear on the wall`);}
+take one down and pass it round, ${(myCount) - 1} bottles of bear on the wall`);}
+    }
+
+    // Another way to solve the 99 bottle challenge
+    function bearGame(){
+        let numBottles = 99;
+        while(numBottles <= 99 && numBottles >= 0){
+            if(numBottles === 99){
+                console.log(`${numBottles} bottles of bear on the wall, ${numBottles} bottles of bear
+take one down and pass it round, ${numBottles - 1} bottles of bear on the wall`)
+            } else if (numBottles < 99 && numBottles > 1){
+                console.log(`${numBottles} bottles of bear on the wall, ${numBottles} bottles of bear
+take one down and pass it round, ${numBottles - 1} bottles of bear on the wall`)
+            } else if (numBottles === 1){
+                console.log(`${numBottles} bottles of bear on the wall, ${numBottles} bottles of bear
+take one down and pass it round, no bottles of bear on the wall`)
+            } else if (numBottles === 0){
+                console.log(`no more bottles of bear on the wall, no more bottles of bear on the wall
+Go to the store and buy some more, 99 bottles of bear on the wall`)
+            }
+            numBottles--
+        }
     }
