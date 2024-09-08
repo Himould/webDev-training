@@ -26,3 +26,34 @@ const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
 for (let i = 0; i < people.length; i++){
     console.log(people[i].toUpperCase());
 }
+
+// Number Guess Game 
+
+let maximum = parseInt(prompt("enter your maximum number"));
+while (!maximum){
+    maximum = parseInt(prompt(`enter a valid number`));
+}
+
+const targetNumber = Math.floor(Math.random() * maximum) + 1
+let guessedNumber = prompt(`enter your first guess! (type q to quit the game)`);
+let attempt = 1
+
+while (parseInt(guessedNumber) !== targetNumber){
+    if (guessedNumber === "q") break;
+    guessedNumber = parseInt(guessedNumber);
+    if (guessedNumber > targetNumber){
+        attempt++;
+        guessedNumber = prompt(`Number too high, try again`);
+    } else if (guessedNumber < targetNumber){
+        attempt++;
+        guessedNumber = (prompt(`Number too low, try again`));
+    } else{
+        guessedNumber = prompt(`Invalid guess. Please enter a number or 'q' to quit`)
+    }
+}
+    if (guessedNumber === "q"){
+        console.log(`YOU QUIT!!! TRY AGAIN ANOTHER TIME`)
+    } else{
+        console.log(`YOU GOT IT!!! AFTER ${attempt} guesses`);
+    }
+    
