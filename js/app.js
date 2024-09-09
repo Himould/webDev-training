@@ -57,3 +57,8 @@ while (parseInt(guessedNumber) !== targetNumber){
         console.log(`YOU GOT IT!!! AFTER ${attempt} guesses`);
     }
     
+    // Using For...of Loop
+    const numbers = [1,2,3,4,5,6,7,8,9];
+    for (let numbs of numbers) {
+    console.log(numbs * numbs);
+}
