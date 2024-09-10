@@ -26,7 +26,7 @@ const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
 for (let i = 0; i < people.length; i++){
     console.log(people[i].toUpperCase());
 }
-
+/*
 // Number Guess Game 
 
 let maximum = parseInt(prompt("enter your maximum number"));
@@ -54,11 +54,29 @@ while (parseInt(guessedNumber) !== targetNumber){
     if (guessedNumber === "q"){
         console.log(`YOU QUIT!!! TRY AGAIN ANOTHER TIME`)
     } else{
-        console.log(`YOU GOT IT!!! AFTER ${attempt} guesses`);
-    }
+        alert(`YOU GOT IT!!! AFTER ${attempt} guesses`);
+    } */
     
     // Using For...of Loop
     const numbers = [1,2,3,4,5,6,7,8,9];
     for (let numbs of numbers) {
     console.log(numbs * numbs);
 }
+
+// Fibonancci generator
+
+function fibGen(n) {
+    let output = [];
+    if (n === 1){
+        output = [0];
+    } else if (n === 2){
+        output = [0, 1]
+    } else {
+        output = [0, 1]
+        for (i = 2; i < n; i++){
+            output.push(output[output.length - 2] + output[output.length - 1])
+        }
+    } 
+    return output
+}
+fibGen(4);
