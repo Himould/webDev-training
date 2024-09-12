@@ -80,3 +80,42 @@ function fibGen(n) {
     return output
 }
 fibGen(4);
+
+// function that returns a square stored in variable using arrow func
+const square = (x)=>(x*x)
+
+// Method Exercise
+const myMath = {
+    area:(y) =>(y * y),
+    perimeter:(z)=>(z * 4)
+};
+
+
+const hen = {
+    name: 'Helen',
+    eggCount: 0,
+    layAnEgg: function(){
+        this.eggCount++
+        return 'EGG'
+    }
+}
+
+// USING THE map for callback
+
+const fullNames = [{first: 'Albus', last: 'Dumbledore'}, {first: 'Harry', last: 'Potter'}, 
+    {first: 'Hermione', last: 'Granger'}, {first: 'Ron', last: 'Weasley'},
+    {first: 'Rubeus', last: 'Hagrid'}, {first: 'Minerva', last: 'McGonagall'}, {first: 'Severus', last: 'Snape'}];
+
+
+// const firstNames = fullNames.map(function(fname){
+//     return fname.first;
+// });
+
+// or solve it this way using arrow function
+
+const firstNames = fullNames.map(names=>(names.first) )
+
+console.log(firstNames);
+
+// more arrow function
+const greet = name => `Hey ${name}!`;

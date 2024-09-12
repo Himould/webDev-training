@@ -25,6 +25,6 @@ newlist.push('juice', 'pop');
 
 const finalList = [shoplist.concat(newlist, newlist)];
 console.log(finalList);
-console.log(finalList.lastIndexOf('pop'));
+finalList.lastIndexOf('pop')
 
 
