@@ -119,3 +119,36 @@ console.log(firstNames);
 
 // more arrow function
 const greet = name => `Hey ${name}!`;
+
+// filter
+// function validUserNames(usernames) {
+
+//   validUserNames.filter(validUserNames.lenght < 10)
+// }
+
+// const validUserNames = ['mark', 'staceysmom1978', 'q29832128238983', 'carrie98', 'MoanaFan'];
+
+const validUserNames = username => username.filter(user => user.length < 10);
+
+// spread, destructuring Arrays and objects
+
+const nums = [23,4,46,455,77,4446,324,246,7774]
+Math.max(nums)
+Math.max(...nums)
+
+console.log(...'hello');
+
+const cats = ['blue', 'scout', 'rocket']
+const dogs = ['rusty', 'bingo']
+const allpets = [...cats, ...dogs]
+console.log(allpets);
+
+/* movies.map(movie => {
+    return `${movie.title} ${movie.year} is rated ${movie.score}`
+})
+
+this can be destructure below
+
+movies.map(({title, score, year}) => {
+    return `${title} ${year} is rated ${score}`
+}) */
