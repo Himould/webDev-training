@@ -146,7 +146,38 @@ function fibo(numOfTimes){
     temp = nr1 + nr2;
     nr1 = nr2;
     nr2 = temp; 
-    console.log(fibonacciArray);
-  }
+  }  console.log(fibonacciArray);
 }
 fibo(5);
+
+let counter = 0;
+let step = 5;
+do {console.log(counter)
+counter += step} 
+while (counter <= 100)
+
+   let read = 0;
+   while(read <= 20){
+      console.log(read)
+   read++
+   }
+
+   let evenNumber = [];
+   let newCount = 0;
+   while(newCount < 100){ if (newCount % 2 === 0){
+      evenNumber.push(newCount)
+   }
+     newCount++
+   }
+   console.log(evenNumber);
+
+// for loop, object inside of an array
+   const myWork = [];
+ for (let x = 1; x < 10; x++) {
+    let stat = x % 2 ? true : false;
+    let temp = {
+        name: `Lesson ${x}`, status: stat
+    };
+    myWork.push(temp);
+ }
+ console.log(myWork);

@@ -36,7 +36,7 @@ while (!maximum){
 
 const targetNumber = Math.floor(Math.random() * maximum) + 1
 let guessedNumber = prompt(`enter your first guess! (type q to quit the game)`);
-let attempt = 1
+let attempt = 1;
 
 while (parseInt(guessedNumber) !== targetNumber){
     if (guessedNumber === "q") break;
