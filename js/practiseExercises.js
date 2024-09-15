@@ -84,3 +84,69 @@ if (myVar){
 const ID = false
 const newMsg = (ID) ? "Allow in" : "Denied Access";
 console.log(newMsg);
+
+// ROCK PAPER SCISSORS GAME -- Rock will beat out Scissors, Paper will beat out Rock, and Scissors will beat out Paper
+
+const myArr = ["Rock", "Paper", "Scissors"]; 
+let computer = Math.floor(Math.random() * 3); 
+let player = Math.floor(Math.random() * 3); 
+let message = "player " + myArr[player] + " vs computer " + myArr[computer] + " "; 
+
+if (player === computer) { 
+    message = "it's a tie"; 
+} else if (player > computer) { 
+    if (computer == 0 && player == 2) { 
+        message = "Computer Wins"; 
+    } else { 
+        message = "Player Wins"; 
+    } 
+} else { 
+    if (computer == 2 && player == 0) { 
+        message = "Player Wins"; 
+    } else {    message += "Computer Wins"; 
+    } 
+} 
+console.log(message);
+
+// my time
+let myTime = 9;
+let output;
+if (myTime >= 8 && myTime < 12) {
+   output = "Wake up, it's morning";
+} else if (myTime >= 12 && myTime < 13) {
+   output = "Go to lunch";
+} else if (myTime >= 13 && myTime <= 16) {
+   output = "Go to work";
+} else if (myTime > 16 && myTime < 20) {
+   output = "Dinner time";
+} else if (myTime >= 22) {
+   output = "Time to go to sleep";
+} else {
+   output = "You should be sleeping";
+}
+console.log(output);
+
+let val = 100;
+ let message2 = (val > 100) ? `${val} was greater than 100` : `${val} was LESS or Equal to 100`;
+ console.log(message2);
+
+ let check = (val % 2) ? `Odd` : `Even`;
+ check = `${val} is ${check}`;
+ console.log(check);
+
+//  another way to solve the fibonnaci 
+
+function fibo(numOfTimes){
+   let nr1 = 0;
+   let nr2 = 1;
+   let temp;
+   fibonacciArray = [];
+   while (fibonacciArray.length < numOfTimes) {
+    fibonacciArray.push(nr1);
+    temp = nr1 + nr2;
+    nr1 = nr2;
+    nr2 = temp; 
+    console.log(fibonacciArray);
+  }
+}
+fibo(5);
