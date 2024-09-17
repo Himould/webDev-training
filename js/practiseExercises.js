@@ -181,3 +181,18 @@ while (counter <= 100)
     myWork.push(temp);
  }
  console.log(myWork);
+
+ const arr = [1, 2, 3, 4, 5];
+const [first, , third, ...rest] = arr;
+
+console.log(first, third, rest);
+
+
+function returnDay(day){
+   let daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+   if (day > 7 || day < 1){
+       return null;
+   } else {
+       return daysOfWeek[day - 1];
+   }
+ }
