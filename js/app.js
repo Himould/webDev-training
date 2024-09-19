@@ -152,3 +152,23 @@ this can be destructure below
 movies.map(({title, score, year}) => {
     return `${title} ${year} is rated ${score}`
 }) */
+
+// constructor function, take note of the capital and the new, call method- take not of use of () for methods
+// let housekeeper1 = {
+//     yearsOfExperience: 12,
+//     name: "jane",
+//     cleaningProperties:['bathroom', 'Lobby', 'bedroom']
+// }
+
+function HouseKeeper (yearsOfExperience, name, cleaningProperties) {
+    this.yearsOfExperience = yearsOfExperience;
+    this.name = name;
+    this.cleaningProperties = cleaningProperties;
+    this.clean = function(){
+        alert('cleaning in progress');
+    }
+}
+let housekeeper2 = new HouseKeeper(9, 'Tom', ['lobby', 'bedroom']);
+console.log(housekeeper2);
+console.log(housekeeper2.clean());
+
