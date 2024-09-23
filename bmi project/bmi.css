@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    margin-left: 25%;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 10px;
+    font-family: sans-serif, Arial, Helvetica;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* font */
+.male, .female {
+    font-size: 25px;
+    font-weight: 20px;
+}
+
+p {
+    font-size: 25px;
+    font-weight: 20px;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.age, .measure, .gender {
+    background-color: white; 
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+h2 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.gender {
+    display: flex;
+    justify-content:space-evenly
+}
+
+.measure{
+    display: flex;
+   justify-content: space-evenly;
+}
+.height, .weight {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 23px;
+
+}
+
+.btn{
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: aqua;
+    border-radius: 10px;
+    font-size: 27px;
+    font-weight: 20px;
+}
+
+ .female .fmale, .male .Mmale {
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+
+  top: 0;
+  left: 0;
+  background-color: #dd1818;
+  border-radius: 50%;
+}
+
+input[type='number']{
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 0.5px solid aqua;
+    outline-width: 0px;
+    border-radius: 7px;
+    text-align: center;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#radio {
+    background-color: blue;
+}
+
+
+.btn  {
+    outline: 0px;
+    border: 0px
+}
+
+radio {
+    background-color: blue;
+}
+
+.health {
+    color: aqua;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 330px) {
+    body {
+        background-color: green;
+    }
+}
