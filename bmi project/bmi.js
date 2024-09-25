@@ -7,6 +7,13 @@ btn.addEventListener('click', function(){
     let status = document.querySelector('.health');
     let maleCheck = document.querySelector('.Mmale').checked;
     let femaleCheck = document.querySelector('.fmale').checked;
+    let age = document.querySelector('#ageInput').value;
+
+    // age validation
+    if(!age){
+        alert('please specify your age');
+        return;
+    }
 
     // gender validation
     if(maleCheck === false && femaleCheck === false){
