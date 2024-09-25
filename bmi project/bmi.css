@@ -82,6 +82,7 @@ h2 {
     border-radius: 10px;
     font-size: 27px;
     font-weight: 20px;
+    cursor: pointer;
 }
 
  .female .fmale, .male .Mmale {
