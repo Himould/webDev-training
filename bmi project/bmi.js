@@ -8,21 +8,25 @@ btn.addEventListener('click', function(){
     let maleCheck = document.querySelector('.Mmale').checked;
     let femaleCheck = document.querySelector('.fmale').checked;
     let age = document.querySelector('#ageInput').value;
+    let modeAlert = document.querySelector('.modal');
 
     // age validation
     if(!age){
-        alert('please specify your age');
+        modeAlert.style.display = 'block';
+        modeAlert.innerHTML = 'kindly input your age';
         return;
     }
 
     // gender validation
     if(maleCheck === false && femaleCheck === false){
-        alert('select a gender');
+        modeAlert.style.display = 'block';
+        modeAlert.innerHTML = 'Select a gender';
         return;
     } 
     // weight and height validation
     if(height === '' || weight === ''){
-        alert('please fill in the required field');
+        modeAlert.style.display = 'block';
+        modeAlert.innerHTML = 'please fill-in the required field';
         return;
     }
         height = height / 100
@@ -37,3 +41,14 @@ btn.addEventListener('click', function(){
             status.innerText = 'Overweight'
         } else {status.innerText = 'Obese'}
 })
+
+// modeAlert.addEventListener('click', function(){
+//     modeAlert.style.display = "none";
+// })
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modeAlert) {
+      modeAlert.style.display = "none";
+    }
+  }

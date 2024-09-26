@@ -74,7 +74,7 @@ h2 {
 
 }
 
-.btn{
+.btn {
     padding: 10px;
     margin-left: 50px;
     margin-right: 50px;
@@ -83,6 +83,12 @@ h2 {
     font-size: 27px;
     font-weight: 20px;
     cursor: pointer;
+}
+
+.btn:hover{
+    color: orange;
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(155, 40, 57);
+    transform: translateY(-0.25em);
 }
 
  .female .fmale, .male .Mmale {
@@ -119,8 +125,17 @@ input[type='number']{
     border: 0px
 }
 
-radio {
-    background-color: blue;
+#bmiOutput {
+    height: 30px;
+    width: 30%;
+    background-color: rgb(212, 212, 240);
+    margin: auto;
+    border-radius: 50%;
+}
+
+#bmiOutput p {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .health {
@@ -131,6 +146,25 @@ radio {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.modal {
+    display: none;
+    margin-left: 7%;
+    height: 35px;
+    width: 35%;
+    background-color: red;
+    border-radius: 8px;
+    position:fixed;
+    z-index: 1;
+    overflow: auto;
+}
+
+.modal p {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+ 
 }
 
 @media (max-width: 330px) {
