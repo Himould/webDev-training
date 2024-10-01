@@ -165,10 +165,23 @@ function HouseKeeper (yearsOfExperience, name, cleaningProperties) {
     this.name = name;
     this.cleaningProperties = cleaningProperties;
     this.clean = function(){
-        alert('cleaning in progress');
+        console.log('cleaning in progress');
     }
 }
 let housekeeper2 = new HouseKeeper(9, 'Tom', ['lobby', 'bedroom']);
 console.log(housekeeper2);
 console.log(housekeeper2.clean());
 
+// form methods
+const form = document.querySelector('form');
+const list = document.querySelector('#list');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const product = form.elements.product.value;
+    const qty = form.elements.qty.value;
+    const newLi = document.createElement('li');
+    newLi.innerText = `${qty} ${product}`;
+    list.appendChild(newLi);
+    form.reset();
+});
