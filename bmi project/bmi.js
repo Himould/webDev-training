@@ -35,11 +35,16 @@ btn.addEventListener('click', function(){
         // range and category 
         if(BMI < 18.5){
             status.innerText = 'Underweight'
+            status.style.color = 'red';
         } else if (BMI >= 18.5 && BMI <= 24.9){
             status.innerText = 'Healthy'
+            status.style.color = 'green';
         } else if (BMI >= 25 && BMI <= 29.9){
             status.innerText = 'Overweight'
-        } else {status.innerText = 'Obese'}
+            status.style.color = 'red';
+        } else {status.innerText = 'Obese'
+            status.style.color = 'red';
+        }
 })
 
 // modeAlert.addEventListener('click', function(){
