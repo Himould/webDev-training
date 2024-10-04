@@ -197,7 +197,7 @@ function returnDay(day){
    }
  }
 
- document.queryselector('input[type="text"]')
+ document.queryselector('input[type="text"]');
 
  const eggImg = document.querySelector('img');
 eggImg.src = 'https://images.unsplash.com/photo-1581061090142-c2cd0ec9f021?w=200';
@@ -216,3 +216,19 @@ const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 const myColors = document.querySelectorAll('span');
 for (let i = 0; i < myColors.length; i++){
 myColors[i].style.color = colors[i];}
+
+// Call-Stack
+
+function multiply(x,y) {
+   return x * y;
+}
+
+function square(x) {
+   return multiply(x,x);
+}
+
+function isRightTriangle(a,b,c){
+   return square(a) + square(b) === square(c);
+}
+
+isRightTriangle(3,4,5)
