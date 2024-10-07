@@ -232,3 +232,22 @@ function isRightTriangle(a,b,c){
 }
 
 isRightTriangle(3,4,5)
+
+let age = prompt('age?', 18);
+
+
+// let myMsg = (age < 3) ? 'Hi, baby!' :
+//   (age < 18) ? 'Hello!' :
+//   (age < 100) ? 'Greetings!' :
+//   'What an unusual age!';
+
+// console.log( myMsg );
+
+// let message = (login == 'Employee') ? 'Hello' :
+//   (login == 'Director') ? 'Greetings' :
+//   (login == '') ? 'No login' :
+//   '';
+
+let user = "John";
+
+alert(user ?? "Anonymous"); // John (user is not null/undefined)
