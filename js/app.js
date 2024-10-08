@@ -191,10 +191,10 @@ if (userInput === 'Admin'){
    let pass = prompt('enter password');
     if (pass === 'TheMaster'){
         alert('welcome')
-    } else if (pass ==='other'){
+    } else if (pass === '' || pass === null){
         alert('wrong password')
     } else {alert('cancel')}
-} else if (userInput == 'other'){
+} else if (userInput === '' || userInput === null ){
     alert('i dont know you')
 } else {
     alert('Cancel')
