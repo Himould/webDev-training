@@ -251,3 +251,11 @@ let age = prompt('age?', 18);
 let user = "John";
 
 alert(user ?? "Anonymous"); // John (user is not null/undefined)
+
+
+if (age >= 14 && age <= 90){
+   console.log(age)
+}
+if (ageReal <= 14 || ageReal >= 90){
+   console.log(age)
+}

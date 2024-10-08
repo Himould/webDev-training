@@ -185,3 +185,17 @@ form.addEventListener('submit', function(e){
     list.appendChild(newLi);
     form.reset();
 });
+
+let userInput = prompt('who is there');
+if (userInput === 'Admin'){
+   let pass = prompt('enter password');
+    if (pass === 'TheMaster'){
+        alert('welcome')
+    } else if (pass ==='other'){
+        alert('wrong password')
+    } else {alert('cancel')}
+} else if (userInput == 'other'){
+    alert('i dont know you')
+} else {
+    alert('Cancel')
+}
