@@ -188,7 +188,7 @@ const [first, , third, ...rest] = arr;
 console.log(first, third, rest);
 
 
-function returnDay(day){
+/*function returnDay(day){
    let daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
    if (day > 7 || day < 1){
        return null;
@@ -258,4 +258,30 @@ if (age >= 14 && age <= 90){
 }
 if (ageReal <= 14 || ageReal >= 90){
    console.log(age)
-}
+}*/
+
+let user = {
+   name: "John",
+   age: 30,
+ 
+   sayHi() {
+     // "this" is the "current object"
+     console.log(this.name);
+   }
+ 
+ };
+ 
+ user.sayHi(); // John
+
+ let newUser = {
+   name: "John",
+   age: 30,
+   isAdmin: true
+ };
+ 
+ for (let key in newUser) {
+   // keys
+   console.log( key );  // name, age, isAdmin
+   // values for the keys
+   console.log( newUser[key] ); // John, 30, true
+ }
