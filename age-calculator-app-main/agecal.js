@@ -439,11 +439,11 @@ SubmitBtn.addEventListener('click', function (e) {
 //     calculateDate(birthday);
 // })
 
-const day = document.getElementById("day");
+    const day = document.getElementById("day");
     const month = document.getElementById("month");
     const year = document.getElementById("year");
-    const labels = document.getElementsByTagName("label");
-    const error = document.getElementsByClassName("error");
+    const labels = document.querySelector(".label");
+    const error = document.getElementById("error1");
     const submitButton = document.getElementById("submit");
     const spans = document.getElementsByTagName("span");
 
@@ -462,14 +462,47 @@ const day = document.getElementById("day");
         "Must be a valid date"
     ];
 
+// Check Day input
+function CheckDayInput()
+{
+    alert('I ran when clicked')
+    let dayValue = day.value;
+    if(dayValue == ''){
+        error.innerHTML = typeOfError[1];
+        error.style.color = 'red';
+        labels.style.color = 'red';
+        return false;
+    } else if(dayValue < 1 || dayValue > 31)
+    {
+        error.innerHTML = typeOfError[2];
+        error.style.color = 'red';
+        labels.style.color = 'red';
+        alert('what is wrong')
+        return false;
+    } else{
+        return true;
+    }
+}
 
 submitButton.addEventListener('click', function calAge(e) {
+  
+    CheckDayInput();
+
     // check validity
     let yearAge = currentYear - year.value;
     let monthAge = currentMonth - month.value;
     let dayAge = currentDay - day.value;
     if(monthAge < 0 || (monthAge == 0 && dayAge < 0 )){
         yearAge--
+        if(monthAge === 0){
+            monthAge === 11
+        } else {monthAge = monthAge + 12 }
+        dayAge = dayAge + 30;
+
+        // Display Result
+        spans[0].innerHTML = yearAge;
+        spans[1].innerHTML = monthAge;
+        spans[2].innerHTML = dayAge;
         alert(`you are ${yearAge} old`)
     }
 })
