@@ -1,4 +1,21 @@
-var generateName = require('sillyname');
-var sillyName = generateName();
+// var generateName = require('sillyname');
 
-console.log(`my name is ${sillyName}.`)
+
+// import generateName from "sillyname"
+// var sillyName = generateName();
+
+// console.log(`my name is ${sillyName}.`)
+
+
+
+import superheroes from 'superheroes';
+
+superheroes;
+//=> ['3-D Man', 'A-Bomb', …]
+
+let random = Math.floor(Math.random() * 100)
+
+const myName = superheroes;
+
+console.log(`I am ${myName[random]}.!!!`);
+
