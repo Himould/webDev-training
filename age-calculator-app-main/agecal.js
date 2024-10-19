@@ -442,8 +442,8 @@ SubmitBtn.addEventListener('click', function (e) {
     const day = document.getElementById("day");
     const month = document.getElementById("month");
     const year = document.getElementById("year");
-    const labels = document.querySelector(".label");
-    const error = document.getElementById("error1");
+    const labels = document.getElementsByTagName("label");
+    const error = document.getElementsByClassName("error");
     const submitButton = document.getElementById("submit");
     const spans = document.getElementsByTagName("span");
 
@@ -462,27 +462,48 @@ SubmitBtn.addEventListener('click', function (e) {
         "Must be a valid date"
     ];
 
+    
+
 // Check Day input
 function CheckDayInput()
 {
     alert('I ran when clicked')
     let dayValue = day.value;
+
     if(dayValue == ''){
-        error.innerHTML = typeOfError[1];
-        error.style.color = 'red';
-        labels.style.color = 'red';
+        for (let err of error){err.innerHTML = typeOfError[1]; //This process is to iterate over all the error tag
+            err.style.color = 'red'}
+        for (let label of labels){label.style.color = 'red'}
+
         return false;
-    } else if(dayValue < 1 || dayValue > 31)
-    {
-        error.innerHTML = typeOfError[2];
-        error.style.color = 'red';
+    } else if (dayValue < 1 || dayValue > 31) {
+
+        
+        error[0].innerHTML = typeOfError[2];
+        error[0].style.color = 'red';
         labels.style.color = 'red';
         alert('what is wrong')
         return false;
     } else{
+        error.innerHTML = typeOfError[0];
         return true;
     }
 }
+
+// Check Month Input
+function checkMonthInput(){
+    let monthValue = month.value;
+    if(monthValue == ''){
+        error.innerHTML = typeOfError[1];
+        return false;
+    } else if(monthValue < 1 || monthValue > 12)
+    {
+        error.innerHTML = typeOfError[3];
+        return false;
+    } else {
+        error.innerHTML = typeOfError[0];
+        return true;
+    }}
 
 submitButton.addEventListener('click', function calAge(e) {
   
