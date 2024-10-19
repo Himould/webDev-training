@@ -462,12 +462,12 @@ SubmitBtn.addEventListener('click', function (e) {
         "Must be a valid date"
     ];
 
-    
+    let yearAge = currentYear - year.value;
+    let monthAge = currentMonth - month.value;
+    let dayAge = currentDay - day.value;
 
 // Check Day input
-function CheckDayInput()
-{
-    alert('I ran when clicked')
+function CheckDayInput(){
     let dayValue = day.value;
 
     if(dayValue == ''){
@@ -481,11 +481,11 @@ function CheckDayInput()
         
         error[0].innerHTML = typeOfError[2];
         error[0].style.color = 'red';
-        labels.style.color = 'red';
+        labels[0].style.color = 'red';
         alert('what is wrong')
         return false;
     } else{
-        error.innerHTML = typeOfError[0];
+        error[0].innerHTML = typeOfError[0];
         return true;
     }
 }
@@ -494,23 +494,46 @@ function CheckDayInput()
 function checkMonthInput(){
     let monthValue = month.value;
     if(monthValue == ''){
-        error.innerHTML = typeOfError[1];
+        for (let err of error){err.innerHTML = typeOfError[1]; //This process is to iterate over all the error tag
+            err.style.color = 'red'}
+        for (let label of labels){label.style.color = 'red'}
+
         return false;
-    } else if(monthValue < 1 || monthValue > 12)
-    {
-        error.innerHTML = typeOfError[3];
+    }  else if (monthValue < 1 || monthValue > 12){
+        error[1].innerHTML = typeOfError[3];
+        error[1].style.color = 'red';
+        labels[1].style.color = 'red';
         return false;
     } else {
-        error.innerHTML = typeOfError[0];
-        return true;
-    }}
+            error[1].innerHTML = typeOfError[0];
+            return true;}}
 
-submitButton.addEventListener('click', function calAge(e) {
-  
-    CheckDayInput();
+    // Year Input check
 
-    // check validity
-    let yearAge = currentYear - year.value;
+    function checkYearInput() {
+            let yearValue = year.value;
+            if (yearValue == '') {
+                for (let err of error){err.innerHTML = typeOfError[1]; //This process is to iterate over all the error tag
+                    err.style.color = 'red'}
+                for (let label of labels){label.style.color = 'red'}
+                return false;
+              } else if (yearValue > currentYear) {
+                error[2].innerHTML = typeOfError[4];
+                error[2].style.color = 'red';
+                labels[2].style.color = 'red';
+                return false;
+            } else {
+                error[2].innerHTML = typeOfError[0];
+                return true;
+            }}
+
+    // Check Validity
+
+    function checkValidity(){
+        
+        // check validity, also check if any of the functions is not valid, display should be none
+        alert('I ran when clicked')
+        let yearAge = currentYear - year.value;
     let monthAge = currentMonth - month.value;
     let dayAge = currentDay - day.value;
     if(monthAge < 0 || (monthAge == 0 && dayAge < 0 )){
@@ -520,10 +543,20 @@ submitButton.addEventListener('click', function calAge(e) {
         } else {monthAge = monthAge + 12 }
         dayAge = dayAge + 30;
 
-        // Display Result
         spans[0].innerHTML = yearAge;
         spans[1].innerHTML = monthAge;
         spans[2].innerHTML = dayAge;
         alert(`you are ${yearAge} old`)
-    }
+    }}
+
+
+submitButton.addEventListener('click', function calAge(e) {
+  
+    CheckDayInput();
+    checkMonthInput();
+    checkYearInput();
+    checkValidity();
+    
+
+        
 })
