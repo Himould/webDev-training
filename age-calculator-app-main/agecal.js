@@ -165,45 +165,6 @@ window.onload = function(){
 
 
 /*
-// working on an alternative solution - the leap year function from previous exercise
-function isLeap(year) {
-    
-
-        
-        //Write your code here.    
-        if (year % 4 === 0) {
-            if (year % 100 === 0) {
-                if (year % 400 === 0) {
-                    return 'Leap year.';
-                }else {
-                    return 'Not a leap year.';
-                }
-            } else {
-                return 'Leap year.';
-                }
-            }else {
-                return 'Not a leap year.';}
-        
-        }
-        console.log(isLeap(1998));  
-
-//  code to work with
-
-const DayError = document.querySelector('.day-error');
-const MonthError = document.querySelector('.month-error');
-const YearError = document.querySelector('.year-error');
-const YearResult = document.querySelector('.year-result');
-const MonthResult = document.querySelector('.month-result');
-const DayResult = document.querySelector('.day-result');
-const SubmitBtn = document.querySelector('.btn');
-const InputDay = document.getElementById('day');
-const InputMonth = document.getElementById('month');
-const InputYear = document.getElementById('year');
-const InputRequiredError = 'This field is required';
-const InputDayError = 'Must be a valid day';
-const InputMonthError = 'Must be a valid month';
-const InputYearError = 'Must be in the past';
-const Canvas = document.querySelector('.can');
 
 
 
@@ -227,45 +188,6 @@ function CheckDayInput()
     }
 }
 
-function CheckMonthInput()
-{
-    let value = InputMonth.value;
-    if(value == '')
-    {
-       MonthError.innerHTML = InputRequiredError;
-        return false;
-    }
-    else if(value < 1 || value > 12)
-    {
-        MonthError.innerHTML = InputMonthError;
-        return false;
-    }
-    else
-    {
-        MonthError.innerHTML = '';
-        return true;
-    }
-}
-
-
-
-function CheckYearInput() {
-    let value = InputYear.value;
-    let currentYear = new Date().getFullYear();
-    console.log(currentYear);
-    if (value == '') {
-        YearError.innerHTML = InputRequiredError;
-        return false;
-    }
-    else if (value > currentYear) {
-        YearError.innerHTML = InputYearError;
-        return false;
-    }
-    else {
-        YearError.innerHTML = '';
-        return true;
-    }
-}
 
 
 function calculateAge(birthday){
@@ -322,6 +244,7 @@ SubmitBtn.addEventListener('click', function (e) {
     const error = document.getElementsByClassName("error");
     const submitButton = document.getElementById("submit");
     const spans = document.getElementsByTagName("span");
+    const input = document.getElementsByTagName("input")
 
     const date = new Date();
 
@@ -408,17 +331,19 @@ function checkMonthInput(){
     function checkValidity(){
         
         // check validity, also check if any of the functions is not valid, display should be none
-        alert('I ran when clicked')
         let yearAge = parseInt(currentYear - year.value);
     let monthAge = parseInt(currentMonth - month.value);
-    let dayAge = currentDay - day.value;
+    let dayAge = parseInt(currentDay - day.value);
     if(monthAge < 0 || (monthAge === 0 && dayAge < 0 )){
         yearAge--
         if(monthAge === 0){
             monthAge = 11
         } else {monthAge = monthAge + 12 }
                 dayAge = dayAge + 30;
-             }
+             } //else if (dayAge == (-dayAge)){
+                  //  return dayAge;
+           //  }
+    
     spans[0].innerHTML = yearAge;
     spans[1].innerHTML = monthAge;
     spans[2].innerHTML = dayAge;
@@ -434,11 +359,8 @@ submitButton.addEventListener('click', function calAge() {
     checkYearInput();
     
     if(!checkYearInput() || !CheckDayInput() || !checkMonthInput()){
-        return spans[0].innerHTML = "--";
-    }
-    
-
-        
+        for(let spaned of spans){spaned.innerHTML = "--";}}  
+        input.style.borderColor = "red";
 })
 
 
