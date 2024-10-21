@@ -66,9 +66,14 @@ main {
 }
 
 .refresh {
-    margin-left: 50%;
+    margin-left: 20%;
     color: var(--Purple);
     cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--Light-red);
+    position: absolute;
 }
 .error {
     font-size: 12px;
