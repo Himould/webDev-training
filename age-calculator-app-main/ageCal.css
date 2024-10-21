@@ -64,6 +64,12 @@ main {
 .single-input input input:focus{
     border: 1px solid var(--Purple);
 }
+
+.refresh {
+    margin-left: 50%;
+    color: var(--Purple);
+    cursor: pointer;
+}
 .error {
     font-size: 12px;
     font-style: italic;

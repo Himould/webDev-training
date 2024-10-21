@@ -244,7 +244,9 @@ SubmitBtn.addEventListener('click', function (e) {
     const error = document.getElementsByClassName("error");
     const submitButton = document.getElementById("submit");
     const spans = document.getElementsByTagName("span");
-    const input = document.getElementsByTagName("input")
+    const input = document.querySelectorAll(".inputed");
+    const mainClose = document.querySelector(".main-content");
+    const refresh = document.querySelector(".refresh");
 
     const date = new Date();
 
@@ -281,7 +283,6 @@ function CheckDayInput(){
         error[0].innerHTML = typeOfError[2];
         error[0].style.color = 'red';
         labels[0].style.color = 'red';
-        alert('what is wrong')
         return false;
     } else{
         error[0].innerHTML = typeOfError[0];
@@ -347,7 +348,6 @@ function checkMonthInput(){
     spans[0].innerHTML = yearAge;
     spans[1].innerHTML = monthAge;
     spans[2].innerHTML = dayAge;
-    alert(`you are ${yearAge} old`)
 }
 
 
@@ -359,9 +359,23 @@ submitButton.addEventListener('click', function calAge() {
     checkYearInput();
     
     if(!checkYearInput() || !CheckDayInput() || !checkMonthInput()){
-        for(let spaned of spans){spaned.innerHTML = "--";}}  
-        input.style.borderColor = "red";
+        for(let spaned of spans){spaned.innerHTML = "--";}
+        for(let inp of input){inp.style.borderColor = "red";}
+    } 
+        
+
+        
 })
+refresh.addEventListener('click', ()=>{location.reload();})
+
+// download a close icon and work on it use it on the settime out
+// window.onclick = function(e){
+    
+// }
+// mainClose.addEventListener('click', ()=>{
+   
+// })
+
 
 
 /*
@@ -382,3 +396,13 @@ function isLeap(year) {
         }
         console.log(isLeap(1998));
 */
+
+/*function leapChecker(year){
+    if(year % 4 == 0 || (year % 100 == 0 && year % 400 == 0)){
+        months[1] = 29;
+    }
+    else{
+        months[1] = 28;
+    }
+}
+    */
