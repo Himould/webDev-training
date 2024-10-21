@@ -13,20 +13,20 @@ btn.addEventListener('click', function(){
     // age validation
     if(!age){
         modeAlert.style.display = 'block';
-        modeAlert.innerHTML = 'kindly input your age';
+        modeAlert.innerHTML = 'kindly input your age <br> click to cancel';
         return;
     }
 
     // gender validation
     if(maleCheck === false && femaleCheck === false){
         modeAlert.style.display = 'block';
-        modeAlert.innerHTML = 'Select a gender';
+        modeAlert.innerHTML = 'Select a gender <br> click to cancel';
         return;
     } 
     // weight and height validation
     if(height === '' || weight === ''){
         modeAlert.style.display = 'block';
-        modeAlert.innerHTML = 'please fill-in the required field';
+        modeAlert.innerHTML = 'please fill-in the required field <br> click to cancel';
         return;
     }
         height = height / 100
@@ -47,13 +47,15 @@ btn.addEventListener('click', function(){
         }
 })
 
+let modeAlert = document.querySelector('.modal');
+modeAlert.addEventListener('click', ()=>{location.reload();})
 // modeAlert.addEventListener('click', function(){
 //     modeAlert.style.display = "none";
 // })
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modeAlert) {
-      modeAlert.style.display = "none";
-    }
-  }
+// window.onclick = function(event) {
+//     if (event.target == modeAlert) {
+//       modeAlert.style.display = "none";
+//     }
+//   }
