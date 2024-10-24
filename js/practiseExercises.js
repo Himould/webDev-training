@@ -269,10 +269,34 @@ if (ageReal <= 14 || ageReal >= 90){
 
 // Promises and Async JS
 
-let promise = new Promise(function(resolve, reject) {
-   // the function is executed automatically when the promise is constructed
+// let promise = new Promise(function(resolve, reject) {
+//    // the function is executed automatically when the promise is constructed
  
-   // after 1 second signal that the job is done with the result "done"
-   setTimeout(() => reject("done"), 1000);
- });
+//    // after 1 second signal that the job is done with the result "done"
+//    setTimeout(() => resolve("done"), 1000);
+//  });
 
+//  let promise = new Promise(function(resolve, reject) {
+//    // not taking our time to do the job
+//    reject(123); // immediately give the result: 123
+//  });
+
+// let promise = new Promise(function(resolve, reject) {
+//    setTimeout(() => resolve("done!"), 1000);
+//  });
+ 
+//  // resolve runs the first function in .then
+//  promise.then(
+//    result => alert(result), // shows "done!" after 1 second
+//    error => alert(error) // doesn't run
+//  );
+
+ let promise = new Promise(function(resolve, reject) {
+   setTimeout(() => reject(new Error("Whoops!")), 1000);
+ });
+ 
+ // reject runs the second function in .then
+ promise.then(
+   result => alert(result), // doesn't run
+   error => alert(error) // shows "Error: Whoops!" after 1 second
+ );
