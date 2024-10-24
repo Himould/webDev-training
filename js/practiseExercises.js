@@ -1,4 +1,7 @@
 
+/*
+
+
 // miles to kilometer converter, note how i use Math.round to round it up to the nearest 2decimal
 function converter(miles){
     let kilometers = miles / 1.60934
@@ -77,7 +80,7 @@ if (myVar){
  }else{
     message = "You are not allowed in!";
  }
- console.log(message); */
+ console.log(message); 
 
 //  conditional tenary operator
 
@@ -187,6 +190,8 @@ const [first, , third, ...rest] = arr;
 
 console.log(first, third, rest);
 
+*/
+
 
 /*function returnDay(day){
    let daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -260,28 +265,14 @@ if (ageReal <= 14 || ageReal >= 90){
    console.log(age)
 }*/
 
-let user = {
-   name: "John",
-   age: 30,
- 
-   sayHi() {
-     // "this" is the "current object"
-     console.log(this.name);
-   }
- 
- };
- 
- user.sayHi(); // John
+// 
 
- let newUser = {
-   name: "John",
-   age: 30,
-   isAdmin: true
- };
+// Promises and Async JS
+
+let promise = new Promise(function(resolve, reject) {
+   // the function is executed automatically when the promise is constructed
  
- for (let key in newUser) {
-   // keys
-   console.log( key );  // name, age, isAdmin
-   // values for the keys
-   console.log( newUser[key] ); // John, 30, true
- }
+   // after 1 second signal that the job is done with the result "done"
+   setTimeout(() => reject("done"), 1000);
+ });
+
