@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <script src="https://kit.fontawesome.com/e5845badae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<form action="submit">
+
+    <h1>
+        Contact Us
+    </h1>
+    
+    <section class="first_lastName">
+        <div class="fNAme" id="fNAme">
+            <label for="fName"> First Name <span class="required_input">*</span></label>
+        <input type="text" class="fNAme" name="fName">
+        <p class="formAlert">This field is required</p>
+        </div>
+        
+        <div class="lName" id="lNAme">
+            <label for="lName"> Last Name <span class="required_input">*</span></label>
+        <input type="text" class="lName" name="lName">
+        <p class="formAlert">This field is required</p>
+        </div>
+    </section>
+    
+    <div class="email" id="email">
+        <label for="email"> Email Address <span class="required_input">*</span></label>
+    <input type="text" class="email" name="email">
+    <p class="formAlert">Please enter a valid email address</p>
+    </div>
+    
+    <section class="query_type">
+    
+        <label for="querytype">Query Type <span class="required_input">*</span></label>
+       
+       <div class="new">
+        <div class="general">
+            <input type="radio" name="same" > <label for="general_enquiry">General Enquiry</label>
+        </div>
+        <div class="support">
+            <input type="radio" name="same"> <label for="support_request">Support Request</label>
+        </div>
+       </div>
+    
+     <p class="formAlert">Please select a query type</p>
+    </section>
+    
+    <div class="msg">
+        <label for="msg"> Message <span class="required_input">*</span></label>
+      <textarea name="msg" id="msg" rows="2" required></textarea>
+    </div>
+    
+    <div class="con">
+    
+        <div class="consent">
+            <label for="Iconsent"> <span class="checkbox"><input type="checkbox" value="agree"> </span> I consent to being contacted by the team</label>
+        </div>
+        <p class="formAlert">To submit this form, please consent to being contacted</p>
+    
+    </div>
+    
+    <button class="button">Submit</button>
+
+</form>
+
+    <div class="success_msg">
+        <i class="fa-regular fa-circle-check"></i>
+
+        <div class="msg_header">
+
+            Message Sent!
+        </div>
+
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+
+    </div>
+
+    <script src="./js/contact.js"></script>
+</body>
+</html>

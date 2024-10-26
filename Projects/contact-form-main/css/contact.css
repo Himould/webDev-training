@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-green: hsl(148, 38%, 91%);
+    --Green: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(186, 15%, 59%);
+    --Grey_darker: hsl(187, 24%, 22%);
+}
+
+body {
+    background-color: var(--light-green);
+    min-height: 100vh;
+    font-family: verdana sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+label {
+color: var(--Grey_darker);
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    font-family: inherit;
+    border: 1px solid var(--Grey);
+    border-radius: 7px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid var(--Green);
+    border: 1px solid var(--Green);
+}
+
+.formAlert {
+    display: none;
+    color: var(--Red);
+    margin-top: 8px;
+}
+
+.formAlert .click {
+    display: block;
+    color: var(--Red);
+
+}
+
+form {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 16px;
+    padding: 32px;
+    margin: 16px;
+}
+
+form h1 {
+    color: var(--Grey_darker);
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.first_lastName {
+   display: flex;
+   gap: 16px;
+   padding-bottom: 15px;
+   padding-top: 5px;
+}
+
+.query_type {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.query_type .new {
+   display: flex;
+   gap: 16px;
+   margin-top: 8px;
+}
+
+
+.query_type .new .support, .general {
+    width: 100%;
+    outline: 1px solid var(--Grey);
+    border-radius: 10px;
+    display: flex;
+    gap: 16px;
+    padding: 8px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.consent {
+    display: flex;
+    gap: 32px;
+    padding-top: 18px;
+    padding-bottom: 15px;
+}
+
+.consent .checkbox {
+ cursor: pointer;
+ accent-color: var(--Green);
+}
+
+form .button {
+   background-color: var(--Green);
+   width: 100%;
+   padding: 10px;
+   color: var(--White);
+   border-radius: 8px;
+   outline: 0;
+   border: 0;
+   cursor: pointer;
+
+}
+
+.con p  {
+    padding-top: 1px;
+    padding-bottom: 16px;
+}
+
+@media (max-width: 380px){
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        border-radius: 9px;
+        padding: 25px;
+        margin: 10px;
+    }
+}
