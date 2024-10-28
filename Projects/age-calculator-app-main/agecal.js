@@ -8,6 +8,7 @@
     const input = document.querySelectorAll(".inputed");
     const mainClose = document.querySelector(".main-content");
     const refresh = document.querySelector(".refresh");
+    console.log(day);
 
     const date = new Date();
 

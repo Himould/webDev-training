@@ -1,39 +1,44 @@
-const formElem = document.querySelector('form')
-const formAlert = document.querySelector('.formAlert')
+// const formElem = document.getElementById('form')
+// const formAlert = document.querySelector('.formAlert')
 
-console.log(formElem)
-console.log(formElem[6])
+// console.log(formElem);
+// console.log(formElem[6])
 
-formElem[6].addEventListener('change', function(){
-  if (formElem[6].checked) {
-      formElem[7].disabled = false;
-      formElem[7].style.backgroundColor = 'rgb(60, 60, 60)';
-  }else{
-    formElem[7].disabled = true;
-      formElem[7].style.backgroundColor = 'hsl(169, 82%, 27%)';
-  }
-});
 
-formElem.addEventListener('submit', contactus);
+// formElem[6].addEventListener('change', function(){
+//   if (formElem[6].checked) {
+//       formElem[7].disabled = false;
+//       formElem[7].style.backgroundColor = 'rgb(60, 60, 60)';
+//   }else{
+//     formElem[7].disabled = true;
+//       formElem[7].style.backgroundColor = 'hsl(169, 82%, 27%)';
+//   }
+// });
 
-function contactus(event) {
-    e.preventDefault()
-    const fName = event.currentTarget.fName.value.tirm();
-    const lName = event.currentTarget.lName.value.tirm();
-    const email = event.currentTarget.email.value.tirm();
-    const msg = event.currentTarget.msg.value.tirm();
 
-    if(fName === ""){
-     return(formAlert.classList.add('click'))
-    }
 
-    const info = {
-        fName,
-        lName,
-        email,
-        msg,
-        agree: formElem[6].Value,
-    };}
+
+
+// formElem.addEventListener('submit', contactus);
+
+// function contactus(event) {
+//     e.preventDefault()
+//     const fName = event.currentTarget.fName.value.tirm();
+//     const lName = event.currentTarget.lName.value.tirm();
+//     const email = event.currentTarget.email.value.tirm();
+//     const msg = event.currentTarget.msg.value.tirm();
+
+//     if(fName === ""){
+//      return(formAlert.classList.add('click'))
+//     }
+
+//     const info = {
+//         fName,
+//         lName,
+//         email,
+//         msg,
+//         agree: formElem[6].Value,
+//     };}
 
 
 
