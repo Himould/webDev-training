@@ -21,15 +21,15 @@ const successMsg = document.getElementById('successMsg');
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
-
+    
     const firstName = document.getElementById('fName').value.trim()
-    const lastName = document.getElementById('lName').value.trim()
-    const email = document.getElementById('email').value.trim()
-    const querryType = document.querySelectorAll('.sameQuerry')
-    const consent = document.getElementById('consent').checked
+    // const lastName = document.getElementById('lName').value.trim()
+    // const email = document.getElementById('email').value.trim()
+    // const querryType = document.querySelectorAll('.sameQuerry')
+    // const consent = document.getElementById('consent').checked
 
     const formAlert = document.getElementsByClassName('formAlert')
-
+    alert('what ');
     let isValid = true;
     
 
