@@ -16,7 +16,35 @@
 // });
 
 
-const form = document.q
+const form = document.getElementById('form');
+const successMsg = document.getElementById('successMsg');
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+
+    const firstName = document.getElementById('fName').value.trim()
+    const lastName = document.getElementById('lName').value.trim()
+    const email = document.getElementById('email').value.trim()
+    const querryType = document.querySelectorAll('.sameQuerry')
+    const consent = document.getElementById('consent').checked
+
+    const formAlert = document.getElementsByClassName('formAlert')
+
+    let isValid = true;
+    
+
+    // first name validation
+    if(firstName === ''){
+        isValid = false;
+            alert('what wrong');
+        document.querySelector('#fName + .formAlert').style.display = 'block';
+        document.querySelector('#fName').style.border = '1px solid red';
+    } else {
+        document.querySelector('#fName + .formAlert').style.display = 'none';
+        document.querySelector('#fName').style.border = '1px solid grey';
+    }
+});
+
 
 
 
