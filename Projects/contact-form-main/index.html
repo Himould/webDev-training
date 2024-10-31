@@ -63,7 +63,7 @@
         <div class="consent">
             <label for="Iconsent"> <span class="checkbox"><input type="checkbox" value="agree" id="checkbox"> </span> I consent to being contacted by the team</label>
         </div>
-        <p class="formAlert">To submit this form, please consent to being contacted</p>
+        <p class="formError" id="formError" style="color: red;">To submit this form, please consent to being contacted</p>
     
     </div>
     
@@ -71,17 +71,14 @@
 
 </form>
 
-    <div class="success_msg" id="successMsg">
-        <i class="fa-regular fa-circle-check"></i>
-
-        <div class="msg_header">
-
-            Message Sent!
-        </div>
-
-        <p>Thanks for completing the form. We'll be in touch soon!</p>
-
+   <div class="success_msg"  id="successMsg">
+    <div class="success_header">
+        <img src="./assets/images/icon-success-check.svg" alt="">
+        Message Sent!
     </div>
+
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+   </div>
 
     <script src="./js/contact.js"></script>
 </body>

@@ -1,24 +1,21 @@
-const formElem = document.getElementById('form')
+const form = document.getElementById('form');
 const formAlert = document.querySelector('.formAlert')
 
-console.log(formElem);
-console.log(formElem[6])
 
-
-formElem[6].addEventListener('change', function(){
-  if (formElem[6].checked) {
-      formElem[7].disabled = false;
-      formElem[7].style.backgroundColor = 'rgb(60, 60, 60)';
+form[6].addEventListener('change', ()=>{
+  if (form[6].checked) {
+      form[7].disabled = false;
+      form[7].style.backgroundColor = 'rgb(60, 60, 60)';
   }else{
-    formElem[7].disabled = true;
-      formElem[7].style.backgroundColor = 'hsl(169, 82%, 27%)';
+    form[7].disabled = true;
+      form[7].style.backgroundColor = 'hsl(169, 82%, 27%)';
   }
 });
 
 
-const form = document.getElementById('form');
-const successMsg = document.getElementById('successMsg');
-console.log(form);
+
+
+
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
@@ -28,10 +25,10 @@ form.addEventListener('submit', (e)=>{
     const email = document.getElementById('email').value.trim()
     const querryType = document.querySelector('input[name="same"]:checked') // note how to select radio input
     const message = document.getElementById('msg').value.trim()
-    // const consent = document.getElementById('consent').checked
 
     const formAlert = document.getElementsByClassName('formAlert')
-  
+    const formAlertC = document.getElementById('formError')
+    const successMsg = document.getElementById('successMsg');
     let isValid = true;
     
 
@@ -41,6 +38,7 @@ form.addEventListener('submit', (e)=>{
     
         document.querySelector('#fName + .formAlert').style.display = 'block';
         document.querySelector('#fName').style.border = '1px solid red';
+        // return false
     } else {
         document.querySelector('#fName + .formAlert').style.display = 'none';
         document.querySelector('#fName').style.border = '1px solid grey';
@@ -86,5 +84,26 @@ form.addEventListener('submit', (e)=>{
         document.querySelector('#msg + .formAlert').style.display = 'none';
         document.querySelector('#msg').style.border = '1px solid grey';
     }
+
+    // consent validation
+
+    if(form[6].checked){
+        isValid = false;
+        
+        formAlertC.classList.add('formError')
+    } else {
+        formAlertC.classList.remove('formError')
+    }
+   
+    // Form is Valid
+    if(isValid = true){
+         successMsg.style.display = 'block'
+        successMsg.classList.add("success_msg")
+        form.rest()
+    } else {
+        successMsg.style.display = 'none'
+    }
+
+    
 
 });

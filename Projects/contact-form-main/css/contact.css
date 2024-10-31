@@ -16,11 +16,13 @@
 }
 
 body {
+    padding-top: 50px;
     background-color: var(--light-green);
     min-height: 100vh;
     font-family: verdana sans-serif;
     display: grid;
     place-content: center;
+    
 }
 
 label {
@@ -50,17 +52,16 @@ textarea:focus {
     margin-top: 8px;
 }
 
-.formAlert .click {
-    display: block;
+.formError{
+    display: none;
     color: var(--Red);
-
 }
 
 form {
     background-color: var(--White);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     border-radius: 16px;
     padding: 32px;
     margin: 16px;
@@ -68,7 +69,7 @@ form {
 
 form h1 {
     color: var(--Grey_darker);
-    margin-top: 15px;
+    margin-top: 17px;
     padding-bottom: 20px;
 }
 
@@ -131,6 +132,25 @@ form .button {
 .con p  {
     padding-top: 1px;
     padding-bottom: 16px;
+}
+
+.success_msg{
+    display: none;
+    background-color: var(--Grey_darker);
+    color: var(--light-green);
+    width: max-content;
+    padding: 9px;
+    border-radius: 8px;
+    position: fixed;
+    top: 0.5%;
+    left: 36%;
+    
+}
+
+.success_msg .success_header {
+    color: var(--White);
+    font-weight: bold;
+    margin-bottom: 2px;
 }
 
 @media (max-width: 380px){
