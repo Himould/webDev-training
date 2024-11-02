@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navRight {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px; 
+    /* border: 1px solid red; */
+}
+
+.navLeft {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    border: 1px solid red;
+}
+
+.navLeft div {
+    padding-left: 12px;
+}
+
+.aboutMe {
+    padding-top: 50px;
+    height: 250px;
+    width: 350px;
+    padding-left: 30px;
+
+}
+
+.aboutMe h5 {
+    color: blueviolet;
+    padding-bottom: 10px;
+    font-size: x-large;
+}
+
+.skillSet {
+    display:  flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+
+.skillSet div {
+    height: 130px;
+    width: 120px;
+    border: 0.4px solid rgb(79, 69, 69);
+    box-shadow: -2px -2px 2px  darkgrey;
+}
+
+.html, .javaScript, .java, .react, .node, .css {
+    justify-items: center;
+    
+}
+
+.skillSet p {
+    text-align: center;
+    font-size: 13px;
+}
+
+.html span {
+    color: orangered;
+    font-size: 20px;
+}
+.javaScript span {
+    color: yellowgreen;
+    font-size: 20px;
+}
+.java span {
+    color: orangered;
+    font-size: 20px;
+}
+.react span {
+    color: skyblue;
+    font-size: 20px;
+}
+.css span {
+    color: blue;
+    font-size: 20px;
+}
+.node span {
+    color: orangered;
+    font-size: 20px;
+}
