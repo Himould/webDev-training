@@ -25,6 +25,7 @@ nav {
     /* border: 1px solid red; */
 }
 
+
 .navLeft {
     display: flex;
     justify-content: space-between;
@@ -39,17 +40,38 @@ nav {
     border: 1px solid red;
 }
 
+
 .navLeft div {
     padding-left: 12px;
 }
 
+.navLeft #skills {
+   font: bolder;
+   font-weight: bolder;
+   text-decoration: underline;
+}
+
+
 .aboutMe {
+    display: flex;
+    gap: 50px;
     padding-top: 50px;
-    height: 250px;
-    width: 350px;
-    padding-left: 30px;
+   
+    height: 300px;
+    width: 600px;
+    padding-left: 50px;
+    margin-bottom: 100px;
 
 }
+
+.aboutMe img {
+    max-width: 50%;
+    max-height: 60%;
+    display: block;
+}
+/* .aboutMe .myname {
+    width: 100%;
+} */
 
 .aboutMe h5 {
     color: blueviolet;
@@ -57,10 +79,15 @@ nav {
     font-size: x-large;
 }
 
+
+
 .skillSet {
     display:  flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: flex-start;
     padding-bottom: 50px;
+    padding-left: 50px;
 }
 
 .skillSet div {
@@ -83,24 +110,148 @@ nav {
 .html span {
     color: orangered;
     font-size: 20px;
+    padding-left: 10%;
 }
 .javaScript span {
     color: yellowgreen;
     font-size: 20px;
+    padding-left: 10%;
 }
 .java span {
     color: orangered;
     font-size: 20px;
+    padding-left: 10%;
 }
 .react span {
     color: skyblue;
     font-size: 20px;
+    padding-left: 10%;
 }
 .css span {
     color: blue;
     font-size: 20px;
+    padding-left: 10%;
 }
 .node span {
     color: orangered;
     font-size: 20px;
+    padding-left: 10%;
+}
+
+.projects {
+    padding-left: 30px;
+    padding-bottom: 50px;
+}
+.projects h5 {
+    color: blueviolet;
+    padding-bottom: 10px;
+    font-size: x-large;
+}
+.projects h4 {
+    padding-left: 20px;
+}
+
+.projects ul {
+    padding: 10px;
+    padding-left: 50px;
+    font: bolder;
+}
+
+.recommendation h5 {
+    color: blueviolet;
+    padding-bottom: 10px;
+    font-size: x-large;
+}
+
+.recommendation {
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+.contain p {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    width: 330px;
+    height: 130px;
+    font: bold;
+    font-style: italic;
+}
+
+.leaveRecom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding-bottom: 2px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.leaveRecom h5 {
+    color: rgb(9, 7, 11);
+    padding-bottom: 10px;
+    font-size: large;
+}
+
+.leaveRecom .submit {
+   width: 30%;
+   align-self: center;
+   border: 1px solid blueviolet;
+   outline: 0;
+   background-color: white;
+   color: blueviolet;
+   height: 20px;
+   border-radius: 5px;
+}
+
+.recommendation .thanksPop {
+    background-color: blueviolet;
+    width: 200px;
+    height:100px ;
+    display: flex;
+    flex-direction: column;
+  align-content: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 250px;
+  margin-bottom: 10px;
+  /* position: relative;
+  top: -10%;
+  left: 30%;
+  z-index: 1; */
+  
+}
+
+.recommendation .thanksPop button {
+    width: 40%;
+    align-self: center;
+}
+.recommendation .thanksPop p, span {
+    align-self: center;
+    padding-left: 40px;
+}
+
+.leaveRecom .icon {
+    margin-left: 65%;
+    color: purple;
+    font-size: 20px;
+    border: 1px solid orangered;
+   
+}
+.leaveRecom .icon i {
+padding-right: 40px;
+padding-left: -5px;
+
 }
