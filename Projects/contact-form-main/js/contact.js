@@ -37,7 +37,7 @@ form.addEventListener('submit', (e)=>{
         isValid = false;
     
         document.querySelector('#fName + .formAlert').style.display = 'block';
-        document.querySelector('#fName').style.border = '1px solid red';
+        document.querySelector('#fName').style.border = '1px solid brown';
         // return false
     } else {
         document.querySelector('#fName + .formAlert').style.display = 'none';
@@ -99,7 +99,7 @@ form.addEventListener('submit', (e)=>{
     if(isValid = true){
          successMsg.style.display = 'block'
         successMsg.classList.add("success_msg")
-        form.rest()
+        form.rest();
     } else {
         successMsg.style.display = 'none'
     }
